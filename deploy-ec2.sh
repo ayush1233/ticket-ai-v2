@@ -133,7 +133,7 @@ MIRROR_PERCENTAGE=100
 
 # Security
 INTERNAL_SHARED_SECRET=shadow-internal-dev-secret
-JWT_SECRET=shadow-jwt-ec2-$(date +%s)
+JWT_SECRET=shadow-jwt-ec2-production-secret-key-$(date +%s)
 CORS_ALLOWED_ORIGINS=http://localhost:3004,http://$EC2_PUBLIC_IP:3004
 
 # Ports
