@@ -70,11 +70,11 @@ if [ -z "$EC2_PUBLIC_IP" ]; then
 fi
 info "EC2 Public IP: $EC2_PUBLIC_IP"
 
-read -p "  Supabase Project URL [https://your-project.supabase.co]: " SUPABASE_URL
-SUPABASE_URL=${SUPABASE_URL:-https://your-project.supabase.co}
+read -p "  Supabase Project URL (Press Enter for default): " SUPABASE_URL
+SUPABASE_URL=${SUPABASE_URL:-https://likjiuylgndoedpkzxhb.supabase.co}
 
-read -p "  Supabase Anon Key [your-supabase-anon-key]: " SUPABASE_ANON_KEY
-SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY:-your-supabase-anon-key}
+read -p "  Supabase Anon Key (Press Enter for default): " SUPABASE_ANON_KEY
+SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY:-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxpa2ppdXlsZ25kb2VkcGt6eGhiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIzODQ5NzUsImV4cCI6MjA4Nzk2MDk3NX0.y6yvFLWpLWkRPYoi-PpPa645SEBjwWZnd6c-ExZJBHU}
 
 read -p "  Gemini API Key (optional, Enter to skip): " GEMINI_API_KEY
 GEMINI_API_KEY=${GEMINI_API_KEY:-}
