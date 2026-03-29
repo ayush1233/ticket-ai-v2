@@ -105,7 +105,7 @@ echo ""
 echo "━━━ Step 5/7: Building V1 + V2 apps ━━━"
 info "This may take 5-10 minutes on first run..."
 
-cd ~/ticket-ai-v2/clootrack
+cd ~/ticket-ai-v2
 $COMPOSE up -d --build
 log "V1 + V2 apps started"
 
@@ -192,9 +192,9 @@ echo "  3. Open http://$EC2_PUBLIC_IP:3004 for comparisons"
 echo ""
 echo "  🔧 View logs:"
 echo "  cd ~/shadow-deploy && $COMPOSE -f docker-compose.yml -f docker-compose.ec2.yml logs -f"
-echo "  cd ~/ticket-ai-v2/clootrack && $COMPOSE logs -f"
+echo "  cd ~/ticket-ai-v2 && $COMPOSE logs -f"
 echo ""
 echo "  ⛔ Stop everything:"
 echo "  cd ~/shadow-deploy && $COMPOSE -f docker-compose.yml -f docker-compose.ec2.yml down"
-echo "  cd ~/ticket-ai-v2/clootrack && $COMPOSE down"
+echo "  cd ~/ticket-ai-v2 && $COMPOSE down"
 echo ""
