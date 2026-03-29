@@ -45,5 +45,13 @@ services:
     depends_on:
       - backend
 
+  frontend-v2:
+    build: ./frontend-v2
+    restart: unless-stopped
+    ports:
+      - "4000:80"
+    depends_on:
+      - backend
+
 volumes:
   postgres_data:

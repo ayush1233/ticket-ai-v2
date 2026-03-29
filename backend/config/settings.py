@@ -34,6 +34,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'tickets.middleware.V2RequestLoggingMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -102,3 +103,11 @@ REST_FRAMEWORK = {
 
 # Google Gemini
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY', '')
+
+# Caching for V2 Stats
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake',
+    }
+}
